@@ -1,0 +1,22 @@
+version: '2'
+services:
+
+  bike-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    networks:
+      - bike_network
+      
+  bike-ui:
+    image: ransn/bike-ui
+    ports:
+      - "4201:4200"
+    networks:
+      - bike_network
+      
+networks:
+  bike_network:
+    driver: bridge

@@ -18,6 +18,3 @@ EXPOSE 8081
 
 ENTRYPOINT ["java","-jar","bike-0.0.1-SNAPSHOT.jar"]
 
-
-# docker network create --driver bridge isolated_network
-# docker run -d --net=isolated_network --name bike-ui --env HTTP_PROXY="http://127.0.0.1:4200 ransn/bike-ui
